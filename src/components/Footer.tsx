@@ -22,14 +22,14 @@ const Footer = () => {
             className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-tight px-2"
             style={{ color: "#192841" }}
           >
-            Let's Build Something Extraordinary
+            Your Data Already Knows What To Do Next
           </h2>
           <p className="text-xs xs:text-sm sm:text-base md:text-lg text-[#23395d] max-w-2xl mx-auto text-center leading-relaxed px-2">
-            Book a consultation and see how we can accelerate your product journey with AI-powered engineering.
+            Stop asking "Can AI help us?" and start seeing exactly how it improves performance, efficiency, and revenue.
           </p>
          <DialogTrigger asChild>
                 <Button className="bg-primary hover:bg-sky-400 text-primary-foreground hover:shadow-sky-blue text-xs xs:text-sm sm:text-base py-2 sm:py-3 px-4 xs:px-6 sm:px-8">
-                  Book a Consultation
+                  Start Your AI Implementation
                 </Button>
           </DialogTrigger>
         </div>

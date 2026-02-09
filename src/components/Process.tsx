@@ -6,37 +6,37 @@ const Process = () => {
     {
       number: "01",
       title: "Understand",
-      description: "Deep exploration of business goals and data feasibility.",
+      description: "Feasibility Audits & ROI Definition.",
       details:
-        "We conduct technical audits and one-on-one strategy calls to define clear KPIs, ensuring we build a solution that solves the right problem from day one.",
+        "Identify high-impact AI opportunities within your data and workflows.",
     },
     {
       number: "02",
       title: "Architect",
-      description: "Mapping secure, scalable, and AI-ready infrastructure.",
+      description: "Data Modeling & System Design.",
       details:
-        "We map the full system architecture, from vector databases to API gateways, ensuring your data remains secure while maximizing model performance.",
+        "Architect AI systems aligned to your business goals and technical reality.",
     },
     {
       number: "03",
-      title: "Build (AI Core)",
-      description: "Shipping functional, stable, and clean code powered by AI.",
+      title: "Build",
+      description: "Rapid Prototyping & POCs.",
       details:
-        "We ship in weeks, turning architectural plans into working software using best-in-class frameworks like LangChain, OpenAI, and Next.js.",
+        "Embed AI into your existing stack without disruption.",
     },
     {
       number: "04",
       title: "Iterate",
-      description: "Optimizing model accuracy based on real user feedback.",
+      description: "Model Validation & Testing.",
       details:
-        "AI isn't static. We analyze early usage data to refine prompts, reduce latency, and eliminate hallucinations before the full public launch.",
+        "Refine and optimize models based on initial performance data.",
     },
     {
       number: "05",
       title: "Scale",
-      description: "Automating operations for long-term reliability and growth.",
+      description: "Full Implementation Roadmap.",
       details:
-        "We implement CI/CD pipelines, auto-scaling protocols, and enterprise-grade security to ensure your system performs flawlessly as traffic increases.",
+        "Monitor and evolve models as your business grows.",
     },
   ];
 
@@ -73,8 +73,7 @@ const Process = () => {
             The AI Engineering Blueprint
           </h2>
           <p className="text-xl text-muted-foreground">
-            From loose concept to deployed infrastructure, we systematically de-risk
-your build at every stage. A proven process from concept to scale
+            From feasibility audit to roadmap execution.
           </p>
         </div>
 

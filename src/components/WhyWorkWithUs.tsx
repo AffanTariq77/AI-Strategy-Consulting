@@ -5,23 +5,21 @@ import { Brain, Rocket, Zap } from "lucide-react";
 const pillars = [
   {
     icon: Brain,
-    title: "AI-Native Architecture",
+    title: "Security-First by Design",
     description:
-      "We embed AI into every layer of your product, from smart workflows to automation, predictive analytics, and LLM integrations.",
+      "Your data is your competitive edge. We build AI layers with strict security, compliance, and IP protection - ensuring trust at every level.",
   },
   {
     icon: Rocket,
-    title: "Commercial-Grade Execution",
+    title: "End-to-End Ownership",
     description:
-      <>
-  We move beyond <strong>"science experiments"</strong>. From concept to deployment, we build secure, compliant, and scalable systems designed to handle real-world enterprise traffic.
-</>
+      "We aren't just consultants who leave you with a PDF. From strategy and architecture to deployment and monitoring, we take full responsibility for the AI lifecycle.",
   },
   {
     icon: Zap,
-    title: "Future-Proof Scale",
+    title: "Built for the Real World",
     description:
-      "We write modular, clean code using modern stacks. This ensures your platform isn't just fast today, but easy to maintain and upgrade as technology evolves 3 years from now.",
+      "We specialize in AI that works inside real businesses, navigating real constraints, messy data, real users and complex legacy integrations.",
   },
 ];
 
@@ -45,11 +43,10 @@ const WhyWorkWithUs = () => {
             className="text-4xl md:text-5xl font-bold mb-4"
             style={{ color: "#192841" }}
           >
-            The AirBridge Advantage
+            Why Companies Choose Us
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We don’t just deliver code. We deliver competitive advantage.
-Empowering your growth with AI
+            We don't replace your systems, we make them smarter.
           </p>
         </div>
         {/* SVG gradient definition rendered once */}

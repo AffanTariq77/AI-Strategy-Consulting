@@ -12,20 +12,20 @@ const AudienceSegments = () => {
       icon: Rocket,
       title: "Funded Startups",
       description:
-        "Validate fast. We build robust, investor-ready MVPs that demonstrate real traction, helping you secure your next funding round without technical debt.",
+        "Validate fast. We build robust, investor-ready MVPs that demonstrate real traction.",
       cta: "Launch Your MVP",
     },
     {
       icon: Building2,
       title: "Enterprises",
       description:
-        "Modernize legacy systems with secure, scalable AI. We automate critical workflows and unlock data silos without disrupting your existing operations.",
+        "Modernize legacy systems with secure, scalable AI that unlocks data silos.",
       cta: "Scale Your Operations",
     },
     {
       icon: Users,
       title: "Product Teams",
-      description: "Eliminate backlog bottlenecks. Our senior engineers plug directly into your existing workflow to accelerate velocity and ship critical features faster.",
+      description: "Eliminate backlog bottlenecks. Our senior engineers plug directly into your workflow.",
       cta: "Augment Your Team",
     },
   ];

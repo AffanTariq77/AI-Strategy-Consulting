@@ -137,23 +137,14 @@ and we'll define the bridge to get you there.
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Benefits */}
           <div className="space-y-8">
-            <h3 className="text-2xl sm:text-3xl font-bold">Ready to build?</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold">Ready to start?</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-lg">Speed</h4>
+                  <h4 className="font-semibold text-lg">Deliverable</h4>
                   <p className="text-muted-foreground">
-                    Guaranteed response within 24 business hours
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-lg">Security</h4>
-                  <p className="text-muted-foreground">
-                    NDA included upfront. Your IP is 100% protected.
+                    Receive a clear AI Roadmap.
                   </p>
                 </div>
               </div>
@@ -162,7 +153,7 @@ and we'll define the bridge to get you there.
                 <div>
                   <h4 className="font-semibold text-lg">Clarity</h4>
                   <p className="text-muted-foreground">
-                   No sales pressure. Just a technical deep-dive into your goals.
+                    Identify your highest-ROI opportunities in 30 mins.
                   </p>
                 </div>
               </div>

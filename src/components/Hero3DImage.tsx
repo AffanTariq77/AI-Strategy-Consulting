@@ -3,11 +3,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, OrbitControls } from "@react-three/drei";
 import { useState, useEffect } from "react";
 import * as THREE from "three";
-import logo from "@/assets/Pngtreeartificial.png";
+import logo from "@/assets/pngwing.com.png";
 
 
 function FloatingImage({ textureUrl }: { textureUrl: string }) {
   const meshRef = useRef<THREE.Mesh>(null);
+  const glowRef = useRef<THREE.PointLight>(null);
   const [hovered, setHovered] = useState(false);
   const [texture] = useState(() => new THREE.TextureLoader().load(textureUrl));
   const [isMobile, setIsMobile] = useState(false);
@@ -24,23 +25,40 @@ function FloatingImage({ textureUrl }: { textureUrl: string }) {
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     if (meshRef.current) {
-      meshRef.current.position.y = Math.sin(t * 1.2) * 0.2 + 0.2;
-      meshRef.current.rotation.y = !isMobile && hovered ? Math.sin(t * 2) * 0.2 : 0;
-      meshRef.current.scale.setScalar(!isMobile && hovered ? 1.08 : 1);
+      // Subtle floating motion
+      meshRef.current.position.y = Math.sin(t * 0.8) * 0.15;
+      
+      // Keep it facing camera - no rotation on X and Z
+      meshRef.current.rotation.y = 0;
+      meshRef.current.rotation.x = 0;
+      meshRef.current.rotation.z = 0;
+      
+      // Pulsing scale effect
+      const pulseScale = 0.9 + Math.sin(t * 2) * 0.1;
+      meshRef.current.scale.setScalar(pulseScale);
+    }
+    
+    // Pulsing glow effect
+    if (glowRef.current) {
+      const glowIntensity = 1 + Math.sin(t * 2.5) * 0.5;
+      glowRef.current.intensity = glowIntensity;
     }
   });
 
   return (
-    <mesh
-      ref={meshRef}
-      onPointerOver={() => !isMobile && setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-      castShadow
-      receiveShadow
-    >
-      <planeGeometry args={[2.5, 2.5]} />
-      <meshStandardMaterial map={texture} transparent />
-    </mesh>
+    <>
+      <pointLight ref={glowRef} position={[0, 0, 1]} color="#0050b4" intensity={0.8} distance={8} />
+      <mesh
+        ref={meshRef}
+        onPointerOver={() => !isMobile && setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+        castShadow
+        receiveShadow
+      >
+        <planeGeometry args={[2.5, 2.5]} />
+        <meshStandardMaterial map={texture} transparent />
+      </mesh>
+    </>
   );
 }
 

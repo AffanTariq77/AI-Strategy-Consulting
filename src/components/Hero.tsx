@@ -12,11 +12,11 @@ const Hero = () => {
           {/* Left: Text */}
           <div className="flex-1 w-full text-left space-y-5 xs:space-y-6 sm:space-y-7 max-w-2xl md:pr-8">
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight md:leading-[1.1]">
-              Build, Scale, and Transform With<br className="hidden md:block" />
-              AI-Centric Software Development
+              Move Beyond AI Experiments.<br className="hidden md:block" />
+              Build AI That Actually Works.
             </h1>
             <p className="text-sm xs:text-base sm:text-lg md:text-2xl text-muted-foreground max-w-xl md:max-w-2xl">
-              We help start-ups and enterprises turn product ideas into powerful, scalable digital solutions, from MVP to full-fledged AI-driven platforms.
+              Your data already holds the answers. We help you unlock it by designing and integrating AI solutions directly into your existing systems - driving efficiency, intelligence, and measurable ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 items-center md:items-start mt-4">
               <DialogTrigger asChild>
@@ -31,7 +31,7 @@ const Hero = () => {
             </div>
             <div className="pt-4 xs:pt-5 sm:pt-6">
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-4 xs:mb-6">
-                Trusted by 50+ Industries with a 90% Client Retention.
+                Practical AI strategies for Startups & Enterprises.
               </p>
             </div>
           </div>

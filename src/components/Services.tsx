@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
-import OurImpact from "./OurImpact";
 
 import {
   Lightbulb,
@@ -15,60 +14,23 @@ const Services = () => {
   const services = [
     {
       icon: Lightbulb,
-      title: "AI Strategy & Consulting",
+      title: "Custom AI Workflows",
       description: [
-        "AI Transformation Advisory",
-        "Intelligent Innovation Roadmapping",
-        "AI Readiness & Feasibility Assessment",
-        "Smart Business Strategy with AI",
+        "Automate repetitive and data-heavy tasks. We architect intelligent workflows tailored to your specific operations - freeing your teams to focus on strategy, growth, and innovation while AI handles the execution.",
       ],
     },
     {
       icon: Shield,
-      title: "AI Integration & Deployment",
+      title: "Data-Driven Intelligence",
       description: [
-        "AI System Integration",
-        "Enterprise AI Deployment",
-        "Intelligent API & Platform Integration",
-        "Cloud AI Implementation",
+        "We transform fragmented, underutilized data into structured, high-value systems. From predictive forecasting to anomaly detection, we turn your raw data into a competitive decision-making engine.",
       ],
     },
     {
       icon: Puzzle,
-      title: "Generative AI Solutions",
+      title: "Automation & Process Engineering",
       description: [
-        "GenAI Automation Suite",
-        "RAG (Retrieval-Augmented Generation) Pipelines",
-        "AI-Powered Chat & Conversation Tools",
-        "Next-Gen Virtual Assistance",
-      ],
-    },
-    {
-      icon: RefreshCw,
-      title: "AI-Powered Automation",
-      description: [
-        "Smart Process Automation",
-        "Intelligent Workflow Orchestration",
-        "AI-Driven Operations Optimization",
-      ],
-    },
-    {
-      icon: Sparkles,
-      title: "Custom AI Model Development",
-      description: [
-        "Bespoke Predictive Modeling",
-        "Advanced Algorithm Engineering",
-        "AI Model Design & Optimization",
-      ],
-    },
-    {
-      icon: Box,
-      title: "AI Analytics Dashboards",
-      description: [
-        "Smart Insight Dashboards",
-        "AI-Driven Business Intelligence",
-        "Automated Analytics & Reporting",
-        "Predictive KPI Monitoring",
+        "Redesign core processes with AI at the center. Our clients typically reduce manual overhead by 40-60% while significantly improving speed, accuracy, and operational consistency.",
       ],
     },
   ];
@@ -107,12 +69,10 @@ const Services = () => {
               className="text-4xl md:text-5xl font-bold mb-4"
               style={{ color: "#192841" }}
             >
-              Our Services
+              What We Help You Achieve
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive solutions for every stage of your product journey.
-From strategic roadmaps to deployed enterprise agents, we engineer the AI
-infrastructure that powers your growth.
+              Engineering-led strategy that bridges the gap between potential and production.
             </p>
           </div>
 
@@ -177,7 +137,6 @@ infrastructure that powers your growth.
           </div>
         </div>
       </section>
-      <OurImpact />
     </>
   );
 };

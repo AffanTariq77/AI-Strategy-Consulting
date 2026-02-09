@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Impact from "@/components/Impact";
 import TechStack from "@/components/TechStack";
 import Process from "@/components/Process";
 import AudienceSegments from "@/components/AudienceSegments";
@@ -14,6 +15,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Services />
+      <Impact />
       <TechStack />
       <Process />
       <AudienceSegments />
