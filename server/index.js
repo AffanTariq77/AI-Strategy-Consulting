@@ -67,21 +67,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Hardcoded admin credentials
-const ADMIN_EMAIL = 'admin@admin.com';
-const ADMIN_PASSWORD = 'admin123';
-
-// Admin login endpoint
-app.post('/api/admin/login', (req, res) => {
-  const { email, password } = req.body;
-  if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-    // In a real app, use JWT or session here
-    res.json({ success: true, message: 'Login successful', token: 'dummy-admin-token' });
-  } else {
-    res.status(401).json({ success: false, message: 'Invalid credentials' });
-  }
-});
-
 // API endpoint to receive contact form submissions
 app.post('/api/contact', (req, res) => {
   const { name, email, company, message } = req.body;
@@ -115,23 +100,6 @@ app.post('/api/contact', (req, res) => {
       res.status(200).json({ success: true, id: this.lastID });
     }
   );
-});
-
-// API endpoint to get all submissions (for admin panel)
-app.get('/api/admin/submissions', (req, res) => {
-  // TODO: Add authentication
-  console.log('GET /api/admin/submissions called');
-  db.all('SELECT id, name, email, company, message, timestamp FROM submissions ORDER BY timestamp DESC', [], (err, rows) => {
-    if (err) {
-      console.error('--- DATABASE ERROR in /api/admin/submissions ---');
-      console.error('Message:', err.message);
-      console.error('Stack:', err.stack);
-      console.error('Full error object:', err);
-      return res.status(500).json({ error: 'Database error: ' + err.message });
-    }
-    console.log('Fetched submissions:', rows);
-    res.json(rows);
-  });
 });
 
 
