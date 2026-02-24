@@ -14,14 +14,14 @@ const Services = () => {
   const services = [
     {
       icon: Lightbulb,
-      title: "Custom AI Workflows",
+      title: "AI WORKFLOW AUTOMATION",
       description: [
         "Automate repetitive and data-heavy tasks. We architect intelligent workflows tailored to your specific operations - freeing your teams to focus on strategy, growth, and innovation while AI handles the execution.",
       ],
     },
     {
       icon: Shield,
-      title: "Data-Driven Intelligence",
+      title: "Data-Driven Intelligence and Analytics",
       description: [
         "We transform fragmented, underutilized data into structured, high-value systems. From predictive forecasting to anomaly detection, we turn your raw data into a competitive decision-making engine.",
       ],
@@ -31,6 +31,13 @@ const Services = () => {
       title: "Automation & Process Engineering",
       description: [
         "Redesign core processes with AI at the center. Our clients typically reduce manual overhead by 40-60% while significantly improving speed, accuracy, and operational consistency.",
+      ],
+    },
+    {
+      icon: Sparkles,
+      title: "Private LLM's",
+      description: [
+        "Deploy private Large Language Models (LLMs) to keep your sensitive data secure and compliant. Ensure your proprietary information never leaves your environment while leveraging the power of AI.",
       ],
     },
   ];
