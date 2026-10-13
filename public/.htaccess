@@ -1,0 +1,30 @@
+# Single page app routing for Apache / LiteSpeed (cPanel, Namecheap).
+#
+# React Router handles /blog and /blog/<slug> in the browser, but on a refresh
+# or a direct visit the server looks for a real file at that path, finds none,
+# and returns its own 404. This sends every such request to index.html so the
+# app can route it. Real files (assets, images, uploads, sitemap.xml) are still
+# served straight from disk.
+#
+# Vite copies everything in public/ into dist/, so this ships with the build.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # An existing file or folder wins, so assets and uploads are untouched
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Everything else is a client-side route. No RewriteBase, so index.html is
+  # resolved relative to this folder and a subdirectory install works too.
+  RewriteRule . index.html [L]
+</IfModule>
+
+# index.html must never be cached, or a browser keeps loading the old build
+# and asking for asset filenames that no longer exist
+<IfModule mod_headers.c>
+  <FilesMatch "index\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+</IfModule>
