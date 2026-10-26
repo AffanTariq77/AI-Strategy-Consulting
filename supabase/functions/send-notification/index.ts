@@ -31,7 +31,7 @@ serve(async (req) => {
     },
     body: JSON.stringify({
       from: "onboarding@resend.dev", // Use a verified sender
-      to: "affantariq77@gmail.com",
+      to: "info@airbridgedevs.com",
       reply_to: email, // Set reply-to as the user's email
       subject: `New Form Submission from ${platform}`,
       html: `
