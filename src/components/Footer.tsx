@@ -4,6 +4,21 @@ import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
 import logo from "@/assets/airbridge-logo.png";
 
+const siteLinks = [
+  { label: "AirBridge Devs", url: "https://airbridgedevs.com" },
+  { label: "AI Strategy & Consulting", url: "https://strategy.airbridgedevs.com" },
+  { label: "AI Integration & Deployment", url: "https://integrate.airbridgedevs.com" },
+  { label: "Generative AI Solutions", url: "https://genai.airbridgedevs.com" },
+  { label: "AI-Powered Automation", url: "https://automate.airbridgedevs.com" },
+  { label: "AI Analytics Dashboards", url: "https://data.airbridgedevs.com" },
+  { label: "Custom Software Development", url: "https://build.airbridgedevs.com" },
+  { label: "AI-Centric Software Development", url: "https://ai.airbridgedevs.com" },
+  { label: "LLM Cost Optimization", url: "https://airbridgedevs.co" },
+  { label: "Food Tech", url: "https://food-tech.airbridgedevs.com" },
+  { label: "Prompt to Product", url: "https://mvp.airbridgedevs.com" },
+  { label: "Terms and Conditions", url: "https://airbridgedevs.com/terms" },
+];
+
 
 
 const Footer = () => {
@@ -35,6 +50,13 @@ const Footer = () => {
         </div>
       </div>
 
+      <nav aria-label="AirBridge Devs sites" className="border-t border-[#b3c7e6] px-3 py-4 flex flex-wrap justify-center gap-x-4 gap-y-2">
+        {siteLinks.map((link) => (
+          <a key={link.url} href={link.url} className="text-xs text-[#23395d] opacity-70 hover:text-sky-400 transition-colors font-medium whitespace-nowrap">
+            {link.label}
+          </a>
+        ))}
+      </nav>
       <div className="border-t border-[#b3c7e6] w-full overflow-x-hidden">
         <div className="w-full px-3 xs:px-4 sm:px-6 py-3 xs:py-4 sm:py-5 md:py-6">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 xs:gap-4 sm:gap-6">
